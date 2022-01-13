@@ -1,1 +1,1 @@
-![Image](Lab Screen Shot.PNG)
+![Image](https://raw.githubusercontent.com/jheidenr/cse15l-lab-reports/main/Lab%20Screen%20Shot.PNG)
