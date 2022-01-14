@@ -4,7 +4,7 @@
 
 The first step is to install VS Code. Go to this [link](https://code.visualstudio.com/) and follow the instructions for your operating systsem on the website.
 
-![image](/screenshots/Step1ScreenShot.png)
+![image](Screenshots/Step1ScreenShot.png)
 
 It should look like this when you open it.
 
