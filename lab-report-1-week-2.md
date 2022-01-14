@@ -47,7 +47,7 @@ Once your are done playing around with the commands, type `exit` to logout of th
 
 
 
-# Step 4: Move Files Around With `scp`
+# Step 4: Move Files Around With scp
 
 First create a file anywhere on your computer and name it **WhereAmI.java**. Then open it and paste the following code into the file:
 
@@ -101,7 +101,7 @@ Next, log into the server and run the command `mkdir .ssh` and then exit the ser
 
 Finally, run the command `scp /Users/user/.ssh/id_rsa.pub cs15lwi22@ieng6.ucsd.edu:~/.ssh/authorized_keys` in order to copy your public key onto the server.
 
-Note: Replace **User** with your computer's user
+**Replace User with your computer's user**
 
 Below you can see that I am able to `ssh` without putting in my password, which can save a lot of time in the long run.
 
