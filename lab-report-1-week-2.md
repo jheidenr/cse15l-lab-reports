@@ -17,13 +17,11 @@ First install OpenSSH in order to be able to connect to other computers. To do t
 
 Next, you must go to [UCSD's Account Lookup Website](https://sdacs.ucsd.edu/~icc/index.php) and put in your information to find your account name. Then click **Change your password** to chang eyour accounts password and activate your account.
 
-## Finally Connecting
+Now open a new terminal in VS Code. Then input this command:
 
-First open a new terminal in VS Code. Then input this command:
+`ssh cs15lwi22XXX@ieng6.ucsd.edu`
 
-`ssh cs15lwi22zz@ieng6.ucsd.edu`
-
-but replace `zz` with the letters found at the end of your username. When you first connect you may be given a long message and asked to say yes or no. Type `yes` to this message and enter your password.
+but replace `XXX` with the letters found at the end of your username. When you first connect you may be given a long message and asked to say yes or no. Type `yes` to this message and enter your password.
 
 **Note: You will not be able to see the characters of your password as you enter them**
 
@@ -71,9 +69,9 @@ Run the program on your own computer by using
 
 Then copy the file to the server by using the command:
 
-**Replace `zz` with the letters from your account**
+**Replace `XXX` with the letters from your account**
 
-`scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/`
+`scp WhereAmI.java cs15lwi22XXX@ieng6.ucsd.edu:~/`
 
 You will be asked for you password as if your were connecting to the server. Once the file is copied, log back into the server and use `ls` and check if you can see the file. Then run the file on the server.
 
@@ -120,7 +118,7 @@ If you want to run multiple commands with one use of the terminal, just separate
 
 If you want to run commands after logging onto a server, just surround the other commands with quotations.
 
-`ssh cs15lwi22zz@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"`
+`ssh cs15lwi22XXX@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"`
 
 Below you can see me run:
 
