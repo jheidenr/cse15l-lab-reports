@@ -101,7 +101,7 @@ Next, log into the server and run the command `mkdir .ssh` and then exit the ser
 
 Finally, run the command `scp /Users/user/.ssh/id_rsa.pub cs15lwi22@ieng6.ucsd.edu:~/.ssh/authorized_keys` in order to copy your public key onto the server.
 
-**Replace User with your computer's user**
+**Replace User with your computer's user and ~ with the path to the file**
 
 Below you can see that I am able to `ssh` without putting in my password, which can save a lot of time in the long run.
 
