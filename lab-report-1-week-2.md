@@ -4,6 +4,8 @@
 
 The first step is to install VS Code. Go to this [link](https://code.visualstudio.com/) and follow the instructions for your operating systsem on the website.
 
+![image]()
+
 # Step 2: Remotely Connect
 
 ## Initial Step for Windows Users -
@@ -27,7 +29,7 @@ but replace `zz` with the letters found at the end of your username. When you fi
 
 **Note: You will not be able to see the characters of your password as you enter them**
 
-*[image](screenshots/Step2ScreenShot.png)
+![image](screenshots/Step2ScreenShot.png)
 
 # Step 3: Try Some Commands
 
@@ -44,6 +46,8 @@ Here are a few useful commands to try while you are connected:
 * `cp (sourcefile) (destinationfile)` - copies the first file to the second file. It creates the second file if it doesn't already exist.
 
 Once your are done playing around with the commands, type `exit` to logout of the server.
+
+![image](screenshots/Step3ScreenShot.png)
 
 # Step 4: Move Files Around With `scp`
 
@@ -62,6 +66,8 @@ class WhereAmI {
 Run the program on your own computer by using
 > `javac WhereAmI.java` and `java WhereAmI`
 
+![image](screenshots/Step4ScreenShot1.png)
+
 Then copy the file to the server by using the command:
 
 **Replace `zz` with the letters from your account**
@@ -70,8 +76,14 @@ Then copy the file to the server by using the command:
 
 You will be asked for you password as if your were connecting to the server. Once the file is copied, log back into the server and use `ls` and check if you can see the file. Then run the file on the server and notice the different output of the program.
 
+![image](screenshots/Step4ScreenShot2.png)
+
 # Step 5: Create an SSH Key
 
 To create an SSH key use this following string of commands
 
+![image](screenshots/Step5ScreenShot.png)
+
 # Step 6: Optimizing Remote Running
+
+![image](screenshots/Step6ScreenShot.png)
