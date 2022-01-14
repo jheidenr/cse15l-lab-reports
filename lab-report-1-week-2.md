@@ -4,7 +4,7 @@
 
 The first step is to install VS Code. Go to this [link](https://code.visualstudio.com/) and follow the instructions for your operating systsem on the website.
 
-![image](screenshots/Step1ScreenShot.png)
+![image](/screenshots/Step1ScreenShot.png)
 
 It should look like this when you open it.
 
@@ -31,7 +31,7 @@ but replace `zz` with the letters found at the end of your username. When you fi
 
 **Note: You will not be able to see the characters of your password as you enter them**
 
-![image](screenshots/Step2ScreenShot.png)
+![image](/screenshots/Step2ScreenShot.png)
 
 Your terminal should look like this when you fully complete the process.
 
@@ -47,7 +47,7 @@ Here you can see that I tried these commands:
 
 * `pwd` - prints the path to the current working directory
 
-![image](screenshots/Step3ScreenShot.png)
+![image](/screenshots/Step3ScreenShot.png)
 
 Once your are done playing around with the commands, type `exit` to logout of the server.
 
@@ -81,13 +81,13 @@ Then copy the file to the server by using the command:
 
 You will be asked for you password as if your were connecting to the server. Once the file is copied, log back into the server and use `ls` and check if you can see the file. Then run the file on the server.
 
-![image](screenshots/Step4ScreenShot1.png)
+![image](/screenshots/Step4ScreenShot1.png)
 
 Above, you can see me running the file on my own computer and then copying it to the server.
 
 Below, You can see me log back into the server and run the code there. Notice the different output of the program.
 
-![image](screenshots/Step4ScreenShot2.png)
+![image](/screenshots/Step4ScreenShot2.png)
 
 
 # Step 5: Create an SSH Key
@@ -98,7 +98,7 @@ To create an SSH key use the `ssh-keygen` command. This will prompt you to enter
 
 Below you can see that I am able to `ssh` without putting in my password, which can save a lot of time in the long run.
 
-![image](screenshots/Step5ScreenShot.png)
+![image](/screenshots/Step5ScreenShot.png)
 
 
 # Step 6: Optimizing Remote Running
@@ -119,4 +119,4 @@ Below you can see me run:
 
 This string of commands copies WhereAmI.java to the server and then logs into the server to compile and run the code.
 
-![image](screenshots/Step6ScreenShot.png)
+![image](/screenshots/Step6ScreenShot.png)
