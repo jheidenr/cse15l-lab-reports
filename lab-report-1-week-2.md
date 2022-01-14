@@ -10,16 +10,12 @@ It should look like this when you open it.
 
 # Step 2: Remotely Connect
 
-## Initial Step for Windows Users -
-
-If you are using windows, you will need to install OpenSSH in order to be able to connect to other computers. To do this you must:
+First install OpenSSH in order to be able to connect to other computers. To do this you must:
 
 1. Go to Settings/Apps/Apps & Features/Optional Features
 2. Click "Add a Feature" and install **OpenSSH Client** and **OpenSSH Server**
 
-## Finding and Activating Your Personal Account
-
-For this step you must go to [UCSD's Account Lookup Website](https://sdacs.ucsd.edu/~icc/index.php) and put in your information to find your account name. Then click **Change your password** to chang eyour accounts password and activate your account.
+Next, you must go to [UCSD's Account Lookup Website](https://sdacs.ucsd.edu/~icc/index.php) and put in your information to find your account name. Then click **Change your password** to chang eyour accounts password and activate your account.
 
 ## Finally Connecting
 
@@ -92,9 +88,22 @@ Below, You can see me log back into the server and run the code there. Notice th
 
 # Step 5: Create an SSH Key
 
-To create an SSH key use the `ssh-keygen` command. This will prompt you to enter a password for your key, but you should leave it empty.
+To create an SSH key use the `ssh-keygen -t ed25519` command. This will prompt you to enter a destination and password for your key, but you should leave both of these empty. Then, follow this string of commands in order to more securly store your key:
+```
+Get-Service ssh-agent | Set-Service -StartupType Manual
 
-**Note** If you are on Windows, follow `ssh-add` instrunctions at this [Link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation) in order to more securly store your key.
+Start-Service ssh-agent
+
+Get-Service ssh-agent
+
+ssh-add ~\.ssh\id_ed25519
+```
+
+Next, log into the server and run the command `mkdir .ssh` and then exit the server.
+
+Finally, run the command `scp /Users/user/.ssh/id_rsa.pub cs15lwi22@ieng6.ucsd.edu:~/.ssh/authorized_keys` in order to copy your public key onto the server.
+
+Note: Replace **User** with your computer's user
 
 Below you can see that I am able to `ssh` without putting in my password, which can save a lot of time in the long run.
 
