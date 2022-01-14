@@ -4,7 +4,9 @@
 
 The first step is to install VS Code. Go to this [link](https://code.visualstudio.com/) and follow the instructions for your operating systsem on the website.
 
-![image]()
+![image](screenshots/Step1ScreenShot.png)
+
+It should look like this when you open it.
 
 # Step 2: Remotely Connect
 
@@ -23,7 +25,7 @@ For this step you must go to [UCSD's Account Lookup Website](https://sdacs.ucsd.
 
 First open a new terminal in VS Code. Then input this command:
 
->`ssh cs15lwi22zz@ieng6.ucsd.edu`
+`ssh cs15lwi22zz@ieng6.ucsd.edu`
 
 but replace `zz` with the letters found at the end of your username. When you first connect you may be given a long message and asked to say yes or no. Type `yes` to this message and enter your password.
 
@@ -31,23 +33,25 @@ but replace `zz` with the letters found at the end of your username. When you fi
 
 ![image](screenshots/Step2ScreenShot.png)
 
+Your terminal should look like this when you fully complete the process.
+
 # Step 3: Try Some Commands
 
-Here are a few useful commands to try while you are connected:
+Here you can see that I tried these commands:
 
 * `cd (directory)/` - changes your working directory to the one that is specified
 
-*  `ls` - lists all directories under the workig directory
+*  `ls` - lists the names of the files under the working directory
+
+*  `ls -lat` - combines the `l`, `a`, and `t` tags to give a long listing of every file in the working directory, with the files sorted from newest to oldest
 
 * `pwd` - prints the path to the current working directory
 
-* `mkdir (filename)` - creates a file in the working directory with the specified name
-
-* `cp (sourcefile) (destinationfile)` - copies the first file to the second file. It creates the second file if it doesn't already exist.
+![image](screenshots/Step3ScreenShot.png)
 
 Once your are done playing around with the commands, type `exit` to logout of the server.
 
-![image](screenshots/Step3ScreenShot.png)
+
 
 # Step 4: Move Files Around With `scp`
 
@@ -64,9 +68,10 @@ class WhereAmI {
 }
 ```
 Run the program on your own computer by using
-> `javac WhereAmI.java` and `java WhereAmI`
 
-![image](screenshots/Step4ScreenShot1.png)
+`javac WhereAmI.java` and `java WhereAmI`
+
+
 
 Then copy the file to the server by using the command:
 
@@ -74,16 +79,44 @@ Then copy the file to the server by using the command:
 
 `scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/`
 
-You will be asked for you password as if your were connecting to the server. Once the file is copied, log back into the server and use `ls` and check if you can see the file. Then run the file on the server and notice the different output of the program.
+You will be asked for you password as if your were connecting to the server. Once the file is copied, log back into the server and use `ls` and check if you can see the file. Then run the file on the server.
+
+![image](screenshots/Step4ScreenShot1.png)
+
+Above, you can see me running the file on my own computer and then copying it to the server.
+
+Below, You can see me log back into the server and run the code there. Notice the different output of the program.
 
 ![image](screenshots/Step4ScreenShot2.png)
 
+
 # Step 5: Create an SSH Key
 
-To create an SSH key use this following string of commands
+To create an SSH key use the `ssh-keygen` command. This will prompt you to enter a password for your key, but you should leave it empty.
+
+**Note** If you are on Windows, follow `ssh-add` instrunctions at this [Link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation) in order to more securly store your key.
+
+Below you can see that I am able to `ssh` without putting in my password, which can save a lot of time in the long run.
 
 ![image](screenshots/Step5ScreenShot.png)
 
+
 # Step 6: Optimizing Remote Running
+
+Now that you don't have to put in your password every time you log into the server, certain processes become much faster.
+
+If you want to run multiple commands with one use of the terminal, just separate your commands with a semicolon.
+
+`javac WhereAmI.java; java WhereAmI`
+
+If you want to run commands after logging onto a server, just surround the other commands with quotations.
+
+`ssh cs15lwi22zz@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"`
+
+Below you can see me run:
+
+`scp WhereAmI.java cs15lwi22anr@ieng6.ucsd.edu:~/; ssh cs15lwi22anr@ieng6.ucsd.edu "javac WhereAmI.java"; ssh cs15lwi22anr@ieng6.ucsd.edu "java WhereAmI"`
+
+This string of commands copies WhereAmI.java to the server and then logs into the server to compile and run the code.
 
 ![image](screenshots/Step6ScreenShot.png)
