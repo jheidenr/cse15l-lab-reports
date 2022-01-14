@@ -27,6 +27,8 @@ but replace `zz` with the letters found at the end of your username. When you fi
 
 **Note: You will not be able to see the characters of your password as you enter them**
 
+*[image](screenshots/Step2ScreenShot.png)
+
 # Step 3: Try Some Commands
 
 Here are a few useful commands to try while you are connected:
