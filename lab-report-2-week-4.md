@@ -6,7 +6,9 @@
 ![Change 1](Screenshots/Change1.png)
 
 This change was prompted from [test4-file.md](https://github.com/jheidenr/markdown-parse/blob/main/test4-file.md). The symptom of the failure-inducing input was that it printed out an image file as a link:
+
 ![Symptom 1](Screenshots/Symptom1.png)
+
 The correct output would be an empty arraylist.
 
 ## Reflection
@@ -18,7 +20,9 @@ This symptom was produced from the fact that our code had no way to distinguish 
 ![Change 2](Screenshots/Change2.png)
 
 This change was prompted from [test-file8.md](https://github.com/jheidenr/markdown-parse/blob/main/test-file8.md). The symptom of the failure-inducing input was that it printed out a link when there was not any content between the brackets:
+
 ![Symptom 2](Screenshots/Symptom2.png)
+
 The correct output would just be an empty arraylist.
 
 ## Reflection
@@ -30,7 +34,9 @@ This symptom was produced from the fact that our code had no way of detecting th
 ![Change 3](Screenshots/Change3.png)
 
 This change was prompted from [test-file5.md](https://github.com/jheidenr/markdown-parse/blob/main/test-file5.md). The symptom of the failure-inducing input was that it printed out a link when the brackets and the parentheses were separated:
+
 ![Symptom 3](Screenshots/Symptom3.png)
+
 The correct output would be an empty arraylist.
 
 ## Reflection
