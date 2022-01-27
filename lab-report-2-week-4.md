@@ -10,7 +10,7 @@ This change was prompted from [test4-file.md](https://github.com/jheidenr/markdo
 The correct output would be an empty arraylist.
 
 ## Reflection
-This symptom was produced from the fact that our code had no way to distinguish an image file from a valid link. The failure-inducing input had the correct formatting for a link, but an invalid link inside of the parentheses; so we updated our code to include a system to scan the interior of the parentheses for any image tags (such as "*.png*" or "*.jpeg*").
+This symptom was produced from the fact that our code had no way to distinguish an image file from a valid link. The failure-inducing input had the correct formatting for a link, but an invalid link inside of the parentheses; so we updated our code to include a system to scan the interior of the parentheses for any image tags (such as *.png* or *.jpeg*).
 
 # Change 2
 
